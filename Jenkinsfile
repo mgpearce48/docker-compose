@@ -6,7 +6,7 @@ pipeline {
         sh '''
           docker version
           docker info
-          docker compose version 
+          docker-compose version 
           curl --version
           jq --version
         '''
@@ -29,10 +29,10 @@ pipeline {
 //       }
 //     }
   }
-  post {
-    always {
-      sh 'docker compose down --remove-orphans -v'
-      sh 'docker compose ps'
-    }
-  }
+//   post {
+//     always {
+//       sh 'docker compose down --remove-orphans -v'
+//       sh 'docker compose ps'
+//     }
+//   }
 }
