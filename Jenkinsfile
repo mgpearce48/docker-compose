@@ -1,8 +1,5 @@
 pipeline {
-  agent { docker {
-    label 'agent'
-    }
-  }
+  agent any
   stages {
     stage("verify tooling") {
       steps {
